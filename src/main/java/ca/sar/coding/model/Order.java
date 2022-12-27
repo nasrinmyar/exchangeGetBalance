@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name ="CRM.PAYMENT_ORDER" )
+@Table(name ="payment" )
 @NoArgsConstructor
 public class Order implements Serializable {
 	

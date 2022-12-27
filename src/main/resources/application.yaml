@@ -9,24 +9,7 @@ logging:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    username: sa_crm_covert
-    password: sa_crm_covert11
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_example
-    
-spring.jpa:
-  hibernate:
-     jdbc.time_zone: Canada/Pacific
-     format_sql: true
-     show_sql: false
-     dialect: org.hibernate.dialect.Oracle10gDialect
-     current_session_context_class: thread
-     enable_lazy_load_no_trans: true
-     cache.use_second_level_cache: true
-     cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
-     cache.use_query_cache: true
-     c3p0_min_size: 5
-     c3p0_max_size: 30
-     c3p0_timeout: 1800
-     c3p0_acquire_increment: 1
-     c3p0_max_statements: 150
-     naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpll
+    username: sareh
+    password: 1234567
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/banking
+ 
