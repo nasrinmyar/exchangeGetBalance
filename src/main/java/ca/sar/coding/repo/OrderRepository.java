@@ -14,7 +14,9 @@ import ca.sar.coding.model.Order;
 @Repository
 public interface OrderRepository extends CrudRepository<Order, Long >{
 
-	@Query("SELECT a.transactionId FROM Order a WHERE a.status= :status ")
+	@Query("SELECT a.transactionId,a.gcid,a.descr FROM Order a WHERE a.status= :status ")
 	List<String> findByStatus(@Param("status") String status);
+
+	
 	
 }

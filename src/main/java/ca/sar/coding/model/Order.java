@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name ="CRM.PAYMENT_ORDER" )
+@Table(name ="payment" )
 @NoArgsConstructor
 public class Order implements Serializable {
 	
@@ -30,6 +30,9 @@ public class Order implements Serializable {
 	
 	@Column(name="STATUS")
 	private String status;
+	
+	@Column(name="DESCR")
+	private String descr;
 	
 	public Long getGcid() {
 		return gcid;
@@ -50,5 +53,10 @@ public class Order implements Serializable {
 		this.status = status;
 	}
 	
-	
+	public String getDescr() {
+		return status;
+	}
+	public void setSDescr(String status) {
+		this.status = status;
+	}
 }
