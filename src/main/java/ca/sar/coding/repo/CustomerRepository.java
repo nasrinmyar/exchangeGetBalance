@@ -6,14 +6,14 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import ca.sar.coding.model.Order;
+import ca.sar.coding.model.Customer;
 
 
 @Repository
-public interface OrderRepository extends CrudRepository<Order, Long >{
+public interface CustomerRepository extends CrudRepository<Customer, Long >{
 
-	@Query("SELECT a.transactionId,a.gcid,a.descr FROM Order a WHERE a.status= :status ")
-	List<String> findByStatus(@Param("status") String status);
+	@Query("SELECT a.cid,a.name,a.lastname,a.phone_no,a.address,a.status FROM customerinfo a WHERE a.cid= :cid ")
+	List<String> findByCustomerId(@Param("cid") Integer cid);
 
 	
 	

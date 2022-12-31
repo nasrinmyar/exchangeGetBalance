@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import ca.sar.coding.model.StatusModel;
+import ca.sar.coding.service.CustomerService;
 import ca.sar.coding.service.OrderService;
 
 
@@ -21,6 +22,9 @@ public class ApiSampleController {
     
 	@Autowired
 	private OrderService orderService;
+	
+	@Autowired
+	private CustomerService customerService;
 	
     @RequestMapping(value = "/order/{status}", method = RequestMethod.GET) 
     public @ResponseBody List<String> getOders(@PathVariable String status) {
@@ -36,5 +40,10 @@ public class ApiSampleController {
  		  }
     }
     
-    
+	
+	  @RequestMapping(value = "/customer/{cid}", method = RequestMethod.GET)
+	  public @ResponseBody List<String> getCustomerInfo(@PathVariable Integer cid)
+	  { return customerService.findByCustomerId(cid); }
+	 
+   
 }
