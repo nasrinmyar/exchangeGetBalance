@@ -12,7 +12,7 @@ import ca.sar.coding.model.Customer;
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, Long >{
 
-	@Query("SELECT a.cid,a.name,a.lastname,a.phone_no,a.address,a.status FROM customerinfo a WHERE a.cid= :cid ")
+	@Query("SELECT a.cid,a.name,a.lastname,a.phoneno,a.address,a.enabled FROM customerinfo a WHERE a.cid= :cid ")
 	List<String> findByCustomerId(@Param("cid") Integer cid);
 
 	
