@@ -31,7 +31,7 @@ public class Customer implements Serializable {
 	@Column(name="LASTNAME")
 	private String lastname;
 	
-	@Column(name="PHONENO")
+	@Column(name="PHONE_NO")
 	private Long phoneno;
 	
 	@Column(name="ADDRESS")
