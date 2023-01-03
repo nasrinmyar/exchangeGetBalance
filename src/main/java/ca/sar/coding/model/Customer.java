@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Customer implements Serializable {
 	
     private static final long serialVersionUID = 1L;
-
+    
 	@Id
 	@Column(name="CID")
 	private Integer cid;
@@ -38,7 +36,7 @@ public class Customer implements Serializable {
 	private String address;
 	
 	@Column(name="ENABLED")
-	private String enabled;
+	private Integer enabled;
 	
 	
 	public Integer getCid() {
@@ -67,10 +65,10 @@ public class Customer implements Serializable {
 		this.address = address;
 	}
 	
-	public String getEnabled() {
+	public Integer getEnabled() {
 		return enabled;
 	}
-	public void setEnabled(String enabled) {
+	public void setEnabled(Integer enabled) {
 		this.enabled = enabled;
 	}
 	

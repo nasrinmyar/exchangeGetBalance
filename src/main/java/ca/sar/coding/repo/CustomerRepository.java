@@ -16,5 +16,5 @@ public interface CustomerRepository extends CrudRepository<Customer, Long >{
 	List<String> findByCustomerId(@Param("cid") Integer cid);
 
 	
-	
+
 }
